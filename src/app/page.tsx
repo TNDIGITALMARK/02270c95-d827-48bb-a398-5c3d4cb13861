@@ -28,7 +28,7 @@ export default function HomePage() {
                 Transform your life with guidance, support, and empowerment.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8" asChild>
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8" asChild>
                   <Link href="#contact">
                     Start Your Journey
                     <ArrowRight className="w-5 h-5 ml-2" />
@@ -357,7 +357,7 @@ export default function HomePage() {
               Schedule a free consultation to discuss your goals and see how coaching can help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8">
                 Schedule Free Consultation
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
