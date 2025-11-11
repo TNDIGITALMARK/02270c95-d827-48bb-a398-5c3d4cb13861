@@ -1,59 +1,90 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/*
+============================================
+LIFECOACH PLATFORM DESIGN SYSTEM
+Extracted from design reference: ai-generated-preview.png
+============================================
+
+COLOR PALETTE (EXACT VALUES):
+- Warm Cream Background: #F5F1ED (HSL: 30 25% 95%)
+- Sage Green Primary: #8B9D83 (HSL: 100 15% 57%)
+- Rose Gold Accent: #C9A77C (HSL: 35 40% 64%)
+- White Cards: #FFFFFF (HSL: 0 0% 100%)
+- Dark Text: #2C2C2C (HSL: 0 0% 17%)
+- Muted Text: #6B6B6B (HSL: 0 0% 42%)
+
+TYPOGRAPHY:
+- Heading Font: Playfair Display (serif, elegant)
+- Body Font: Inter (sans-serif, clean)
+- H1: 48px bold
+- H2: 36px semi-bold
+- H3: 24px semi-bold
+- Body: 16px regular, line-height: 1.6
+
+SPACING & EFFECTS:
+- Border Radius: 12px (cards), 8px (buttons)
+- Card Shadow: 0 2px 8px rgba(0,0,0,0.08)
+- Button Shadow: 0 2px 4px rgba(0,0,0,0.1)
+- Section Gaps: 32px
+============================================
 */
 
 :root {
-  /* Pure white background with crisp black text */
-  --background: 0 0% 100%;
-  --foreground: 0 0% 0%;
+  /* Warm, nurturing color palette from design reference */
+  --background: 30 25% 95%;  /* Warm cream #F5F1ED */
+  --foreground: 0 0% 17%;    /* Dark text #2C2C2C */
 
-  /* Clean white cards with black text */
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 0%;
+  /* White cards with subtle shadows */
+  --card: 0 0% 100%;         /* Pure white */
+  --card-foreground: 0 0% 17%;
 
-  /* Popovers with white background */
+  /* Popovers */
   --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 0%;
+  --popover-foreground: 0 0% 17%;
 
-  /* Primary: Black with white text */
-  --primary: 0 0% 0%;
+  /* Primary: Sage Green */
+  --primary: 100 15% 57%;    /* #8B9D83 */
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary: Light gray background with black text */
-  --secondary: 0 0% 97%;
-  --secondary-foreground: 0 0% 0%;
+  /* Secondary: Soft cream for hover states */
+  --secondary: 30 30% 93%;
+  --secondary-foreground: 0 0% 17%;
 
-  /* Muted: Subtle gray with darker text */
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 40%;
+  /* Muted text and backgrounds */
+  --muted: 30 20% 90%;
+  --muted-foreground: 0 0% 42%;  /* #6B6B6B */
 
-  /* Accent: Light gray */
-  --accent: 0 0% 96%;
-  --accent-foreground: 0 0% 0%;
+  /* Accent: Rose Gold */
+  --accent: 35 40% 64%;      /* #C9A77C */
+  --accent-foreground: 0 0% 100%;
 
-  /* Destructive: Clean red */
+  /* Destructive states */
   --destructive: 0 70% 50%;
   --destructive-foreground: 0 0% 100%;
 
-  /* Borders: Subtle gray */
-  --border: 0 0% 90%;
-  --input: 0 0% 90%;
-  --ring: 0 0% 0%;
+  /* Borders: Soft and subtle */
+  --border: 30 15% 88%;
+  --input: 30 15% 88%;
+  --ring: 100 15% 57%;  /* Sage green focus ring */
 
-  /* Minimal rounded corners */
-  --radius: 0.375rem;
+  /* Border radius matching design */
+  --radius: 0.75rem;  /* 12px for cards */
 
-  /* Sidebar: Clean white with black text */
+  /* Sidebar */
   --sidebar-background: 0 0% 100%;
-  --sidebar-foreground: 0 0% 0%;
-  --sidebar-primary: 0 0% 0%;
+  --sidebar-foreground: 0 0% 17%;
+  --sidebar-primary: 100 15% 57%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 0 0% 96%;
-  --sidebar-accent-foreground: 0 0% 0%;
-  --sidebar-border: 0 0% 90%;
-  --sidebar-ring: 0 0% 0%;
+  --sidebar-accent: 30 25% 95%;
+  --sidebar-accent-foreground: 0 0% 17%;
+  --sidebar-border: 30 15% 88%;
+  --sidebar-ring: 100 15% 57%;
+
+  /* Custom font variables */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 .dark {
@@ -168,36 +199,120 @@ All colors MUST be HSL.
   border-color: hsl(var(--border));
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
   font-feature-settings: "rlig" 1, "calt" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
-/* Minimal, clean typography */
+/* Elegant, warm typography matching design reference */
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
   font-weight: 600;
   letter-spacing: -0.025em;
   color: hsl(var(--foreground));
+  line-height: 1.2;
 }
 
-/* Clean button styles */
+h1 {
+  font-size: 3rem;        /* 48px */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.25rem;     /* 36px */
+  font-weight: 600;
+  margin-bottom: 0.875rem;
+}
+
+h3 {
+  font-size: 1.5rem;      /* 24px */
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  font-size: 1.25rem;     /* 20px */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: hsl(var(--foreground));
+}
+
+/* Warm button styles */
 button {
+  font-family: var(--font-body);
   font-weight: 500;
+  transition: all 0.2s ease;
 }
 
-/* Subtle shadows for depth */
+/* Form elements with warm styling */
+input, textarea, select {
+  font-family: var(--font-body);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
+}
+
+/* Subtle, warm shadows matching design reference */
 .shadow-sm {
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .shadow {
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
 }
 
 .shadow-md {
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  box-shadow: 0 4px 12px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.08);
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.12), 0 4px 8px -4px rgba(0, 0, 0, 0.08);
+}
+
+/* Smooth transitions */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scrollbar styling for warm aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
 }
