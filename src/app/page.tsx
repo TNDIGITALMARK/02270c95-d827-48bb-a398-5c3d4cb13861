@@ -50,7 +50,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative hidden md:block">
-              <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/generated/hero-coaching-main.png"
                   alt="Professional life coach in welcoming environment"
@@ -194,7 +194,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 md:order-1">
-              <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                 <Image
                   src="/generated/about-coach-portrait.png"
                   alt="Professional life coach portrait"
