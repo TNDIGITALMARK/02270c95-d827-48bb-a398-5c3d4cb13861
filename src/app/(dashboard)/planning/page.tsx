@@ -7,6 +7,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Badge } from '@/components/ui/badge';
 import { activeGoals } from '@/lib/data/mockData';
 import { Plus, Target, CheckCircle2, Clock, AlertCircle } from 'lucide-react';
+import Image from 'next/image';
 
 interface ActionStep {
   id: string;
@@ -107,14 +108,26 @@ export default function PlanningPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 md:px-6 py-8 md:py-12 max-w-7xl">
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl md:text-5xl mb-4">Goal Planning</h1>
-          <p className="text-lg text-muted-foreground">
-            Break down your goals into actionable steps and track your progress
-          </p>
+      {/* Hero Banner */}
+      <div className="relative w-full h-48 md:h-64 mb-8 overflow-hidden">
+        <Image
+          src="/generated/dashboard-planning-hero.png"
+          alt="Goal planning workspace"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-background/40 flex items-center">
+          <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+            <h1 className="text-4xl md:text-5xl mb-4 text-foreground">Goal Planning</h1>
+            <p className="text-lg text-foreground/90">
+              Break down your goals into actionable steps and track your progress
+            </p>
+          </div>
         </div>
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 pb-8 md:pb-12 max-w-7xl">
 
         {/* Goals Overview */}
         <section className="mb-12">

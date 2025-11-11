@@ -51,13 +51,14 @@ export default function HomePage() {
             </div>
             <div className="relative hidden md:block">
               <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center space-y-4 text-white">
-                    <Heart className="w-20 h-20 mx-auto text-white/80" />
-                    <p className="text-xl font-heading">Your transformation begins here</p>
-                  </div>
-                </div>
+                <Image
+                  src="/generated/hero-coaching-main.png"
+                  alt="Professional life coach in welcoming environment"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
               </div>
             </div>
           </div>
@@ -78,11 +79,20 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Service 1 */}
-            <div className="bg-background rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow border border-border">
-              <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
-                <Target className="w-7 h-7 text-primary" />
+            <div className="bg-background rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-border">
+              <div className="relative w-full h-48">
+                <Image
+                  src="/generated/service-planning.png"
+                  alt="Goal planning and strategy"
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <h3 className="text-xl font-heading font-semibold mb-3">Goal Planning & Strategy</h3>
+              <div className="p-8">
+                <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
+                  <Target className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-xl font-heading font-semibold mb-3">Goal Planning & Strategy</h3>
               <p className="text-muted-foreground mb-4 leading-relaxed">
                 Create clear, actionable plans for your personal and professional goals. 
                 We'll break down big dreams into achievable steps.
@@ -101,14 +111,24 @@ export default function HomePage() {
                   <span className="text-sm text-muted-foreground">Progress tracking & accountability</span>
                 </li>
               </ul>
+              </div>
             </div>
 
             {/* Service 2 */}
-            <div className="bg-background rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow border border-border">
-              <div className="w-14 h-14 rounded-lg bg-accent/10 flex items-center justify-center mb-6">
-                <Heart className="w-7 h-7 text-accent" />
+            <div className="bg-background rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-border">
+              <div className="relative w-full h-48">
+                <Image
+                  src="/generated/service-healing.png"
+                  alt="Healing and personal growth"
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <h3 className="text-xl font-heading font-semibold mb-3">Healing & Growth</h3>
+              <div className="p-8">
+                <div className="w-14 h-14 rounded-lg bg-accent/10 flex items-center justify-center mb-6">
+                  <Heart className="w-7 h-7 text-accent" />
+                </div>
+                <h3 className="text-xl font-heading font-semibold mb-3">Healing & Growth</h3>
               <p className="text-muted-foreground mb-4 leading-relaxed">
                 Work through past experiences and emotional challenges in a safe, 
                 supportive environment designed for healing and growth.
@@ -127,14 +147,24 @@ export default function HomePage() {
                   <span className="text-sm text-muted-foreground">Self-compassion practices</span>
                 </li>
               </ul>
+              </div>
             </div>
 
             {/* Service 3 */}
-            <div className="bg-background rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow border border-border">
-              <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
-                <Sparkles className="w-7 h-7 text-primary" />
+            <div className="bg-background rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-border">
+              <div className="relative w-full h-48">
+                <Image
+                  src="/generated/service-transitions.png"
+                  alt="Life transitions and new beginnings"
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <h3 className="text-xl font-heading font-semibold mb-3">Life Transitions</h3>
+              <div className="p-8">
+                <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
+                  <Sparkles className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-xl font-heading font-semibold mb-3">Life Transitions</h3>
               <p className="text-muted-foreground mb-4 leading-relaxed">
                 Navigate major life changes with confidence and clarity. 
                 Whether career shifts, relationships, or personal evolution.
@@ -153,6 +183,7 @@ export default function HomePage() {
                   <span className="text-sm text-muted-foreground">Identity exploration</span>
                 </li>
               </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -164,10 +195,12 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 md:order-1">
               <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/30"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Users className="w-32 h-32 text-white/60" />
-                </div>
+                <Image
+                  src="/generated/about-coach-portrait.png"
+                  alt="Professional life coach portrait"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl"></div>
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
@@ -235,7 +268,14 @@ export default function HomePage() {
                 The support has been incredible."
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-primary/20 mr-4"></div>
+                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
+                  <Image
+                    src="/generated/testimonial-sarah.png"
+                    alt="Sarah M."
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <div>
                   <div className="font-semibold">Sarah M.</div>
                   <div className="text-sm text-muted-foreground">Marketing Executive</div>
@@ -256,7 +296,14 @@ export default function HomePage() {
                 Truly life-changing."
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-accent/20 mr-4"></div>
+                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
+                  <Image
+                    src="/generated/testimonial-jessica.png"
+                    alt="Jessica T."
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <div>
                   <div className="font-semibold">Jessica T.</div>
                   <div className="text-sm text-muted-foreground">Entrepreneur</div>
@@ -277,7 +324,14 @@ export default function HomePage() {
                 use for the rest of my life."
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-primary/20 mr-4"></div>
+                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
+                  <Image
+                    src="/generated/testimonial-emily.png"
+                    alt="Emily R."
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <div>
                   <div className="font-semibold">Emily R.</div>
                   <div className="text-sm text-muted-foreground">Teacher</div>

@@ -6,18 +6,31 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { healingExercises, weeklyCheckIn, earnedBadges } from '@/lib/data/mockData';
 import { Sparkles, Heart, Award } from 'lucide-react';
+import Image from 'next/image';
 
 export default function HealingPage() {
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 md:px-6 py-8 md:py-12 max-w-7xl">
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl md:text-5xl mb-4">Healing Journey</h1>
-          <p className="text-lg text-muted-foreground">
-            Your private space for reflection, growth, and emotional healing
-          </p>
+      {/* Hero Banner */}
+      <div className="relative w-full h-48 md:h-64 mb-8 overflow-hidden">
+        <Image
+          src="/generated/dashboard-healing-hero.png"
+          alt="Peaceful healing space"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-background/40 flex items-center">
+          <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+            <h1 className="text-4xl md:text-5xl mb-4 text-foreground">Healing Journey</h1>
+            <p className="text-lg text-foreground/90">
+              Your private space for reflection, growth, and emotional healing
+            </p>
+          </div>
         </div>
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 pb-8 md:pb-12 max-w-7xl">
 
         {/* Weekly Check-in */}
         <section className="mb-12">
