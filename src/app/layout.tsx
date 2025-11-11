@@ -7,8 +7,8 @@ import { ZyloProvider } from "@/lib/zylo/provider";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { TopNav } from "@/components/lifecoach/TopNav";
-import { BottomNav } from "@/components/lifecoach/BottomNav";
+import { Header } from "@/components/website/Header";
+import { Footer } from "@/components/website/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +22,20 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Empower & Thrive - Life Coaching for Women",
-  description: "Personalized life coaching platform helping women create plans, navigate challenges, and heal from past experiences",
+  description: "Personalized life coaching platform helping women create plans, navigate challenges, and heal from past experiences. Transform your life with professional guidance and support.",
+  keywords: ["life coaching", "women's empowerment", "personal development", "healing", "transformation", "goal planning"],
+  authors: [{ name: "Empower & Thrive" }],
+  openGraph: {
+    title: "Empower & Thrive - Life Coaching for Women",
+    description: "Transform your life with personalized coaching for women. Goal planning, healing, and empowerment.",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Empower & Thrive - Life Coaching for Women",
+    description: "Transform your life with personalized coaching for women.",
+  },
 };
 
 export default function RootLayout({
@@ -87,11 +100,11 @@ export default function RootLayout({
             >
               <TooltipProvider>
                 <div className="min-h-screen flex flex-col">
-                  <TopNav />
-                  <main className="flex-1 pb-20 md:pb-8">
+                  <Header />
+                  <main className="flex-1">
                     {children}
                   </main>
-                  <BottomNav />
+                  <Footer />
                 </div>
                 <Toaster />
                 <Sonner />
